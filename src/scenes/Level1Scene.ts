@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
-import createDudeAnims from '../anims/dudeAnims';
+import CreateDudeAnims from '../anims/DudeAnims';
 
 export default class Level1Scene extends Phaser.Scene {
   platforms: Phaser.Physics.Arcade.StaticGroup;
@@ -42,7 +42,7 @@ export default class Level1Scene extends Phaser.Scene {
     this.player.setCollideWorldBounds(true);
 
     // animations ----
-    createDudeAnims(this.anims);
+    CreateDudeAnims(this.anims);
 
     //  Input Events
     this.cursors = this.input.keyboard.createCursorKeys();

@@ -1,15 +1,15 @@
 import Phaser from 'phaser';
-import createDudeAnims from '../anims/dudeAnims';
+import CreateDudeAnims from '../anims/DudeAnims';
 
 export default class Level2Scene extends Phaser.Scene {
-  platforms: Phaser.Physics.Arcade.StaticGroup;
-  player: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
-  cursors: Phaser.Types.Input.Keyboard.CursorKeys;
-  stars: Phaser.Physics.Arcade.Group;
-  bombs: Phaser.Physics.Arcade.Group;
-  scoreText: Phaser.GameObjects.Text;
-  gameOver: boolean;
-  score: number = 0;
+  private platforms: Phaser.Physics.Arcade.StaticGroup;
+  private player: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
+  private cursors: Phaser.Types.Input.Keyboard.CursorKeys;
+  private stars: Phaser.Physics.Arcade.Group;
+  private bombs: Phaser.Physics.Arcade.Group;
+  private scoreText: Phaser.GameObjects.Text;
+  private gameOver: boolean;
+  private score: number = 0;
 
   constructor() {
     super('level-2');
@@ -19,7 +19,7 @@ export default class Level2Scene extends Phaser.Scene {
 
   create() {
     //  A simple background for our game
-    let graphics = this.add.graphics();
+    const graphics = this.add.graphics();
     graphics.fillGradientStyle(0x5081fc, 0x5081fc, 0x46b501, 0x46b501);
     graphics.fillRect(0, 0, 800, 600);
 
@@ -43,7 +43,7 @@ export default class Level2Scene extends Phaser.Scene {
     this.player.setCollideWorldBounds(true);
 
     // animations ----
-    createDudeAnims(this.anims);
+    CreateDudeAnims(this.anims);
 
     //  Input Events
     this.cursors = this.input.keyboard.createCursorKeys();
