@@ -1,10 +1,10 @@
 import Phaser from 'phaser';
 
-import Preloader from './scenes/preloader.js';
-import Level1 from './scenes/level-1.js';
-import Level2 from './scenes/level-2.js';
+import Level1Scene from './scenes/Level1Scene';
+import Level2Scene from './scenes/Level2Scene';
+import PreloaderScene from './scenes/PreloaderScene';
 
-const config = {
+const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
   width: 800,
   height: 600,
@@ -15,7 +15,7 @@ const config = {
       debug: false,
     },
   },
-  scene: [Preloader, Level1, Level2],
+  scene: [PreloaderScene, Level1Scene, Level2Scene],
 };
 
-const game = new Phaser.Game(config);
+export default new Phaser.Game(config);

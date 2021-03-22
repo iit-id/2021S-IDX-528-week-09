@@ -1,4 +1,8 @@
-export default function createDudeAnims(anims) {
+import Phaser from 'phaser';
+
+export default function createDudeAnims(
+  anims: Phaser.Animations.AnimationManager
+) {
   //  Our player animations, turning, walking left and walking right.
   anims.create({
     key: 'left',
@@ -20,5 +24,3 @@ export default function createDudeAnims(anims) {
     repeat: -1,
   });
 }
-
-
