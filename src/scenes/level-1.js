@@ -1,3 +1,5 @@
+import Phaser from 'phaser';
+
 import createDudeAnims from '../anims/dude-anims.js';
 
 export default class Level1 extends Phaser.Scene {

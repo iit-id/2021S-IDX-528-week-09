@@ -1,3 +1,5 @@
+import Phaser from 'phaser';
+
 import Preloader from './scenes/preloader.js';
 import Level1 from './scenes/level-1.js';
 import Level2 from './scenes/level-2.js';
